@@ -1,0 +1,3 @@
+betamax.egg-info/*
+docs/build/
+.pytest_cache/

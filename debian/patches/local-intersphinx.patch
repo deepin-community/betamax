@@ -1,0 +1,18 @@
+From: Daniele Tricoli <eriol@mornie.org>
+Date: Wed, 13 Jul 2016 17:51:57 +0200
+Subject: Use local python3-doc for intersphinx
+
+Patch-Name: local-intersphinx.patch
+---
+ docs/conf.py | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+--- a/docs/source/conf.py
++++ b/docs/source/conf.py
+@@ -240,6 +240,4 @@
+ intersphinx_mapping = {
+     'python': ('https://docs.python.org/3.6',
+                (None, 'python-inv.txt')),
+-    'requests': ('http://docs.python-requests.org/en/latest',
+-                 (None, 'requests-inv.txt')),
+ }

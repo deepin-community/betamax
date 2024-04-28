@@ -1,0 +1,11 @@
+Document: python-betamax-doc
+Title: Betamax Documentation
+Author: Ian Cordasco
+Section: Programming/Python
+Abstract: Betamax records HTTP interactions and replay them allowing fast,
+ deterministic and accurate tests and it's designed to be used with
+ python-requests.
+
+Format: html
+Index: /usr/share/doc/python-betamax-doc/html/index.html
+Files: /usr/share/doc/python-betamax-doc/html/*.html
