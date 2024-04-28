@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+TESTS_TO_EXCLUDE="tests/integration/test_hooks.py \
+tests/integration/test_placeholders.py \
+tests/integration/test_record_modes.py \
+tests/integration/test_unicode.py \
+tests/regression/test_gzip_compression.py \
+tests/regression/test_requests_2_11_body_matcher.py \
+tests/unit/test_fixtures.py"
+
+cp -r tests "$AUTOPKGTEST_TMP"
+cd "$AUTOPKGTEST_TMP"
+
+for test in ${TESTS_TO_EXCLUDE}; do
+    rm ${test}
+done
+
+py3versions -i | tr ' ' '\n' | xargs -I {} env {} -Wd -m pytest -v -x -rs 2>&1
